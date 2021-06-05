@@ -1,0 +1,120 @@
+.chitiet .Anh{
+
+}
+.chitiet .ThongTin{
+	
+}
+.a{
+	text-align:center;
+	 margin: auto;
+	 width:100%;
+	 
+	
+}
+
+.col-md-2.banchay {
+    height: 36em;
+    overflow-y:scroll;
+}
+.img{width:100%}
+
+img.img_big{width:50%;}
+
+/* .c{float: left;
+    width: 152px;border: 10px solid #9e8f8f24}
+.c:hover{
+	cursor: pointer;
+} */
+
+/* .b{width:100%;} */
+.top_1 ul li {
+   float: left;
+   
+    list-style: none;
+}
+.top_1{
+	margin-bottom:20px;
+}
+.top_1 ul li a{
+    color:green;
+    
+}
+h1.ten_sp{/* font-size: 22px;
+    text-align: left;
+    font-family: sans-serif;
+    font-weight: 900;
+color: #2419e2c9 */
+color:black;
+    font-weight: 700;
+    font-size: 30px;
+    text-transform: uppercase;}
+.trangthai{
+	border-left: 10px solid #ff7f00;
+    font-size: 19px;
+    text-transform: uppercase;
+    line-height: 30px;
+    padding-left: 15px;
+}
+
+.sp1{float:left;}
+
+img.img_sp1 {
+    width: 100%;
+}
+
+/**//* media (min-width: 992px){
+.col-md-3.sp1 {
+    width: 22%;
+    margin-left: 3%;
+}
+} */
+
+/* .col-md-3.sp1 {
+    margin-left: 6.33333%;
+}
+ */
+h4.gia{font-size: 28px;
+    font-weight:900;
+    color: black}
+
+.col-md-12.hr{height: 1px;
+    background:#9e9e9ea3;
+    width: 100%;
+    margin: 15px 0 12px;}
+
+
+button#add_cart{
+    border: 5px solid beige;
+    font-size: 28px;
+    color: brown;
+}
+
+.top_1 ul li a:hover{
+    text-decoration:none;
+}
+h4.thuonghieu,.danhmuc{
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 14px;
+}
+
+/*  */
+
+.col-sm-6.b{
+    height: 350px;
+    width: 100%;
+}
+.col-sm-4.c{
+    background-color: #e5e5d7;
+    border: 2px solid #fff;
+    cursor:pointer;
+}
+
+@media (max-width:768px){
+.col-sm-4.c{
+   width:30%;
+  margin:auto;
+}
+.col-sm-6.b{
+     height:auto !important;
+}
+}
