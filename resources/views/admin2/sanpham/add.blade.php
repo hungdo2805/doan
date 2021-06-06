@@ -30,7 +30,7 @@
                         @foreach ($errors->all() as $message)
                              <div class="alert alert-danger" style="color: red">{{ $message }}</div>
                         @endforeach
-                        <form action="admin/product/them" method="POST" enctype="multipart/form-data">
+                        <form action="{{ route('sanpham.store') }}" method="POST" enctype="multipart/form-data">
                             <input type="hidden" name="_token" value="{{csrf_token()}}" />
                             <div class="row">
 
@@ -49,10 +49,10 @@
 
                             </div>
                             <div class="row">
-                                <div class="form-group col-lg-6 col-md-6 ">
+                                <div class="form-group col-lg-12 col-md-12 ">
                                     <label>Danh mục</label>
                         
-                                    <select name="danhmuc" class="form-control" id="danhmuc">
+                                    <select name="danhmuc" class="form-control" id="danhmuc" required>
                                         @foreach($danhmuc as $dm)
                                         <option value="{{$dm['id']}}">{{$dm['name']}}</option>
                                         @endforeach
@@ -62,7 +62,7 @@
                                 <div class="form-group col-lg-6 col-md-6 ">
                                     <label>Loại sản phẩm</label>
                         
-                                    <select name="loai" class="form-control" id="loai">
+                                    <select name="loai" class="form-control" id="loai" required>
                                         @foreach($loaisp as $lsp)
                                         <option value="{{$lsp['id']}}">{{$lsp['name']}}</option>
                                         @endforeach
@@ -71,7 +71,7 @@
 
                                 <div class="form-group col-lg-6 col-md-6 ">
                                     <label>Thương hiệu</label>
-                                    <select name="thuonghieu" class="form-control">
+                                    <select name="thuonghieu" class="form-control" required>
                                         @foreach($thuonghieu as $th)
                                         <option value="{{$th['id']}}">{{$th['name']}}</option>
                                         @endforeach
@@ -83,12 +83,12 @@
                                
                                 <div class="form-group col-lg-12 col-md-12 ">
                                     <label>Tên sản phẩm</label>
-                                    <input type="text" class="form-control" name="ten" placeholder="Vui lòng nhập tên sản phẩm" />
+                                    <input type="text" class="form-control" name="ten" placeholder="Vui lòng nhập tên sản phẩm" required />
                                 </div>
                         
                                 <div class="form-group col-lg-6 col-md-6 ">
                                     <label>Giá</label>
-                                    <input type="number" class="form-control" name="gia" placeholder="Vui lòng nhập giá tiền" value="{{old('gia')}}" />
+                                    <input type="number" class="form-control" name="gia" placeholder="Vui lòng nhập giá tiền" value="{{old('gia')}}" required />
                                 </div>
                         
                                 <div class="form-group col-lg-6 col-md-6 ">
@@ -111,7 +111,7 @@
                                 </div>
                         
                                   <div class="form-group col-lg-6 col-md-6 ">
-                                    <label>Giá km</label>
+                                    <label>Giá khuyến mãi</label>
                                     <input type="number" class="form-control" name="giakm" placeholder="Giá khuyến mãi" value="{{old('giakm')}}" />
                                 </div>
                         
@@ -122,7 +122,7 @@
                         
                                   <div class="form-group col-lg-6 col-md-6 ">
                                     <label>Hình</label>
-                                    <input type="file" name="hinh" class="form-control" required="true" />
+                                    <input type="file" name="hinh" class="form-control" required />
                                  </div>
 
                                  <div class="form-group col-lg-6 col-md-6 ">
@@ -148,4 +148,23 @@
         </div>
     </div>
 </div>
+@endsection
+
+@section('kethuaJS')
+
+<script type="text/javascript">
+    $(document).ready(function(){
+       $("#danhmuc").change(function(){
+           var iddanhmuc = $(this).val();
+           $.get("admin/ajax/loai/" +iddanhmuc,function(data){
+               
+               $("#loai").html(data);
+           });
+
+       });
+
+    });
+</script>
+
+    
 @endsection

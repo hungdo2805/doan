@@ -117,7 +117,7 @@ public function postthem(Request $rq){
             //kiểm tra tên hình trùng lặp
           $name=$file->getClientOriginalName();
           
-          $file->move("imgshoptt/",$name);
+          $file->move("public/imgshoptt/",$name);
           $product->image=$name;
           }
           
@@ -140,7 +140,7 @@ public function postthem(Request $rq){
               if (isset($file)) {
                 $product_img->image= $file->getClientOriginalName();
                 $product_img->id_sp = $product->id;
-                $file->move('imgshoptt_list/',$file->getClientOriginalName());
+                $file->move('public/imgshoptt_list/',$file->getClientOriginalName());
                 $product_img->save();
               }
             }
@@ -207,7 +207,7 @@ public function postthem(Request $rq){
            
           $name=$file->getClientOriginalName();
           
-          $file->move("imgshoptt/",$name);
+          $file->move("public/imgshoptt/",$name);
           $product->image=$name;
           }
           
@@ -230,7 +230,7 @@ public function postthem(Request $rq){
         $list_image=product::find($id)->list_image->toArray();
         
         foreach ($list_image as $value) {
-          File::delete('imgshoptt_list/'.$value["image1"]);
+          File::delete('public/imgshoptt_list/'.$value["image1"]);
           
         }
         $product_details=product::find($id)->product_details->toArray();
@@ -245,13 +245,13 @@ public function postthem(Request $rq){
         // print_r($product_details);
         // echo "</pre>";
         $product=product::find($id);
-          File::delete('imgshoptt/'.$product->image);
+          File::delete('public/imgshoptt/'.$product->image);
         $product->delete($id);
         
       // $product=product::find($id);
       // $product->delete();
 
-      return redirect('admin/product/danhsach')->with('thongbao','Bạn đã xóa thành công');
+      return $this->Home()->with('thongbao','Bạn đã xóa Sản phẩm thành công');
     }
 
   public function getajaxloai($idtheloai){

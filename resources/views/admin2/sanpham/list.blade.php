@@ -42,7 +42,16 @@
                         </div>
                         <div class="card-body">
                             <!-- Modal -->
-                                              
+                             
+                            @if(count($errors) >0)
+                            <div class="alert alert-danger">
+                                @foreach($errors->all() as $err)	
+    
+                                    {{$err}}<br>
+    
+                                @endforeach
+                            </div>
+                             @endif                 
                             
                             @if(session('thongbao'))
                                     <div class="alert alert-success">
@@ -67,8 +76,8 @@
                                             <th>Giá</th>
                                             <th>Giá KM</th>
                                             <th>Hình</th>
-                                              <th>Trạng thái</th>
-                                              <th>Action</th>
+                                            {{-- <th>Trạng thái</th> --}}
+                                            <th>Action</th>
                                             
                                         </tr>
                                     </thead>
@@ -101,14 +110,14 @@
                                             </td>
                                             <td>{{number_format($sp->price,0,",",".")}}</td>
                                             <td>{{number_format($sp->price1,0,",",".")}}</td>
-                                            <td><img src="{{asset('imgshoptt/'.$sp->image)}}" alt="" style="width:150px"></td>
+                                            <td><img src="{{asset('public/imgshoptt/'.$sp->image)}}" alt="" style="width:70px;height:70px"></td>
                                             
                                            
-                                            <td>
+                                            {{-- <td>
                                                 <form action="{{url('admin/product/trang-thai-an/'.$sp->id)}}" method="get" accept-charset="utf-8">
-                                                   <button type="submit">Ẩn</button>
+                                                   <button class="btn btn-link btn-primary btn-lg" type="submit">Ẩn</button>
                                                 </form>
-                                            </td>
+                                            </td> --}}
                                             
                                             <td>
                                                 <div class="form-button-action">
