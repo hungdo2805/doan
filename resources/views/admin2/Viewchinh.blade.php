@@ -27,9 +27,9 @@
 </head>
 <body>
 	<div class="wrapper">
-		@include('admin2.header')
+		@include('admin2.layout.header')
 		<!-- Sidebar -->
-		@include('admin2.slidebar')
+		@include('admin2.layout.slidebar')
 		<div class="main-panel">
 			@yield('Kethuaview')
 

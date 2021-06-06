@@ -37,7 +37,7 @@ CREATE TABLE `bill` (
   `user_phone` char(10) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `address` varchar(250) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `status` int(11) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Đang đổ dữ liệu cho bảng `bill`
@@ -65,7 +65,7 @@ CREATE TABLE `bill_detail` (
   `quantity` int(11) DEFAULT NULL,
   `create_time` timestamp NULL DEFAULT current_timestamp(),
   `update_time` timestamp NULL DEFAULT current_timestamp()
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Đang đổ dữ liệu cho bảng `bill_detail`
@@ -87,7 +87,7 @@ CREATE TABLE `brand` (
   `status` int(11) DEFAULT NULL,
   `Create_time` timestamp NULL DEFAULT current_timestamp(),
   `Update_time` timestamp NULL DEFAULT current_timestamp()
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Đang đổ dữ liệu cho bảng `brand`
@@ -107,7 +107,7 @@ CREATE TABLE `catalog` (
   `id` int(11) NOT NULL,
   `name` varchar(50) DEFAULT NULL,
   `status` int(1) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Đang đổ dữ liệu cho bảng `catalog`
@@ -128,7 +128,7 @@ CREATE TABLE `catalog_detail` (
   `parent_id` int(11) DEFAULT NULL,
   `name` varchar(50) DEFAULT NULL,
   `status` int(1) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Đang đổ dữ liệu cho bảng `catalog_detail`
@@ -155,7 +155,7 @@ CREATE TABLE `comment` (
   `mess` varchar(250) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `create_time` timestamp NULL DEFAULT current_timestamp(),
   `status` bit(1) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Đang đổ dữ liệu cho bảng `comment`
@@ -177,7 +177,7 @@ CREATE TABLE `contact` (
   `mess` text CHARACTER SET utf8 COLLATE utf8_unicode_ci DEFAULT NULL,
   `Create_time` timestamp NULL DEFAULT current_timestamp(),
   `Update_time` timestamp NULL DEFAULT current_timestamp()
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Đang đổ dữ liệu cho bảng `contact`
@@ -198,7 +198,7 @@ CREATE TABLE `list_image` (
   `id` int(11) NOT NULL,
   `id_sp` int(11) DEFAULT NULL,
   `image` varchar(250) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Đang đổ dữ liệu cho bảng `list_image`
@@ -228,7 +228,7 @@ CREATE TABLE `product` (
   `status` int(11) DEFAULT NULL,
   `Create_time` timestamp NULL DEFAULT current_timestamp(),
   `Update_time` timestamp NULL DEFAULT current_timestamp()
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Đang đổ dữ liệu cho bảng `product`
@@ -249,7 +249,7 @@ CREATE TABLE `product_detail` (
   `product_id` int(11) DEFAULT NULL,
   `size_id` int(11) DEFAULT NULL,
   `quantity` int(11) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Đang đổ dữ liệu cho bảng `product_detail`
@@ -270,7 +270,7 @@ CREATE TABLE `product_size` (
   `name` varchar(250) DEFAULT NULL,
   `Create_time` timestamp NULL DEFAULT current_timestamp(),
   `Update_time` timestamp NULL DEFAULT current_timestamp()
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Đang đổ dữ liệu cho bảng `product_size`
@@ -296,7 +296,7 @@ CREATE TABLE `tintuc` (
   `status` int(1) DEFAULT 1,
   `Create_time` timestamp NULL DEFAULT current_timestamp(),
   `Update_time` timestamp NULL DEFAULT current_timestamp()
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Đang đổ dữ liệu cho bảng `tintuc`
@@ -322,7 +322,7 @@ CREATE TABLE `users` (
   `remember_token` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Đang đổ dữ liệu cho bảng `users`

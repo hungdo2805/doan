@@ -29,7 +29,7 @@
                             <input type="hidden" name="_token" value="{{csrf_token()}}"/>
                             <div class="form-group">
                                 <label>Tên danh mục</label>
-                                <input class="form-control" name="name" value="{{$theloai->name}}" />
+                                <input required class="form-control" name="name" value="{{$theloai->name}}" />
                             </div>
                            
                             

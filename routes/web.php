@@ -25,7 +25,7 @@ Route::get('chitiettintuc/{id}','TintucController@getChitiettintuc');
 
 // Route::get('header','HomeController@getheader');
 
-Route::get('admin','HomeController@getadmin')->middleware('adminLogin');
+
 
 Route::get('masterpage1','HomeController@getmasterpage1');
 
@@ -82,18 +82,20 @@ Route::group(['prefix'=>'page'],function(){
 });
 
 Route::group(['prefix'=>'admin','middleware'=>'adminLogin'],function(){
+
+	Route::get('/','HomeController@getadmin')->name('admin.index');
 		Route::group(['prefix'=>'catalog'],function(){
 			// admin/caltalog/danhsach 
-			Route::get('danhsach','TheLoaiController@getdanhsach');
+			Route::get('danhsach','TheLoaiController@getdanhsach')->name('danhmuc.index');
 
-			Route::get('them','TheLoaiController@getThem');
-			Route::post('them','TheLoaiController@postThem');
+			Route::get('them','TheLoaiController@getThem')->name('danhmuc.create');
+			Route::post('them','TheLoaiController@postThem')->name('danhmuc.store');;
 			
-			Route::get('sua/{id}','TheLoaiController@getSua');
-			Route::post('sua/{id}','TheLoaiController@postSua');
+			Route::get('sua/{id}','TheLoaiController@getSua')->name('danhmuc.edit');;
+			Route::post('sua/{id}','TheLoaiController@postSua')->name('danhmuc.update');;
 			
 
-			Route::get('xoa/{id}','TheLoaiController@getXoa');
+			Route::get('xoa/{id}','TheLoaiController@getXoa')->name('danhmuc.delete');;
 		});
 
 
@@ -131,16 +133,16 @@ Route::group(['prefix'=>'admin','middleware'=>'adminLogin'],function(){
 
 		Route::group(['prefix'=>'catalog_detail'],function(){
 			// admin/caltalog/danhsach 
-			Route::get('danhsach','LoaiController@getdanhsach');
+			Route::get('danhsach','LoaiController@getdanhsach')->name('loaisp.index');
 
 			Route::get('them','LoaiController@getthem');
-			Route::post('them','LoaiController@postthem');
+			Route::post('them','LoaiController@postthem')->name('loaisp.store');
 			
-			Route::get('sua/{id}','LoaiController@getsua');
-			Route::post('sua/{id}','LoaiController@postsua');
+			Route::get('sua/{id}','LoaiController@getsua')->name('loaisp.edit');
+			Route::post('sua/{id}','LoaiController@postsua')->name('loaisp.update');
 			
 
-			Route::get('xoa/{id}','LoaiController@getxoa');
+			Route::get('xoa/{id}','LoaiController@getxoa')->name('loaisp.delete');
 		});
 
 		Route::group(['prefix'=>'product_details'],function(){
@@ -263,6 +265,4 @@ Route::group(['prefix'=>'admin','middleware'=>'adminLogin'],function(){
 });
 
 
-Route::get('gdadmin', function () {
-	return view('admin2.Viewchinh');
-});
+

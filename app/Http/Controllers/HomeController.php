@@ -55,7 +55,7 @@ class HomeController extends Controller
 
 
     public function getadmin(){
-        return view('admin.layout.giaodien');
+        return view('admin2.Viewchinh');
     }
 
     public function getChitietsanpham($idsp){

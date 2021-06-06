@@ -10,7 +10,7 @@ $user = Auth::user();
         
         <a href="index.html" class="logo">
             <!-- <img src="../assets/img/logo.svg" alt="navbar brand" class="navbar-brand"> -->
-            <span>Sở hữu trí tuệ</span>
+            <span>Giới thiệu sản phẩm</span>
         </a>
         <button class="navbar-toggler sidenav-toggler ml-auto" type="button" data-toggle="collapse" data-target="collapse" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon">

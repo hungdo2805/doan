@@ -24,9 +24,14 @@ class TheLoaiController extends Controller
         $rd_ds=catalog_detail::select('*')->inRandomOrder()->skip(0)->take(4)->get();
        view()->share(['danhsach'=>$brand,'catalog'=>$catalog,'dml'=>$catalog_detail,'dml1'=>$catalog_detail1,'dml2'=>$catalog_detail2,'rd_ds'=>$rd_ds]);
     }
+    public function Home()
+    {
+       return redirect()->route('danhmuc.index');
+    }
 
      public function getdanhsach(){
-        return view('admin.catalog.danhsach');
+       // return view('admin.catalog.danhsach');
+       return view('admin2.danhmuc.list');
     }
 
     public function getThem(){
@@ -34,30 +39,20 @@ class TheLoaiController extends Controller
     }
     public function postThem(Request $rq)
     {
-        $this->validate($rq,
-        	[
-        		'name' => 'required|unique:catalog,name|min:2|max:100',
-        	],
-        	[
-        		'name.required'=>'Bạn chưa nhập tên thể loại',
-        		'name.unique' => 'Tên đã tồn tại',
-        		'name.min'=>'Tên thể loại phải có từ 2 -> 100 kí tự',
-        		'name.max'=>'Tên thể loại phải có từ 2 -> 100 kí tự',
-
-        	]
-        );
+        
         $theloai= new catalog;
         // $theloai->name(ten khong dau) = str_slug($rq->name,'-');//khong dấu
         $theloai->name=$rq->name;
         $theloai->status=1;
         $theloai->save();
-        return redirect('admin/catalog/them')->with('thongbao','Thêm thành công');
+        return $this->Home()->with('thongbao','Đã tạo mới');;
         
     }
 
     public function getSua($id){
     	$theloai=catalog::find($id);
-    	return view('admin/catalog/sua',['theloai'=>$theloai]);
+    	//return view('admin/catalog/sua',['theloai'=>$theloai]);
+        return view('admin2.danhmuc.edit',compact('theloai'));
     }
 
     public function postSua(Request $rq1,$id){
@@ -78,29 +73,16 @@ class TheLoaiController extends Controller
         	   $theloai->name = $rq1->name;
                $theloai->status=1;
         	   $theloai->save();
-          return redirect('admin/catalog/danhsach')->with('thongbao','Sửa thành công');
+               return $this->Home()->with('thongbao','Đã cập nhật');
     	
     }
 
 
 
 
-public function getxoa($id){
-        $parent_id=catalog_detail::where('parent_id',$id)->count();
-    // echo $size_id;
-    if ($parent_id == 0) {
-        $catalog=catalog::find($id);
-        $catalog->delete($id);
-        return redirect('admin/catalog/danhsach')->with('thongbao','Xóa thành công');
-    }
-    else
-    {
-        echo "<script type='text/javascript'>
-                alert('Xin lỗi Không thể xóa !');
-                window.location = '";
-                    echo url('admin/catalog/danhsach');
-                echo"'
-            </script>";
-    }
-}
+        public function getxoa($id)
+        {
+            catalog::findOrFail($id)->delete(); 
+            return $this->Home();
+        }
 }

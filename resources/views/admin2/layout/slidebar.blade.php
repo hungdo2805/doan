@@ -46,24 +46,26 @@
                     </a>
                     <div class="collapse show" id="tables">
                         <ul class="nav nav-collapse">
+
                             <li class="@yield('menu1')">
-                                <a href="admin/qlcoso">
-                                    <span class="sub-item">Danh sách Sản phẩm</span>
-                                </a>
-                            </li>
-                            <li class="@yield('menu2')">
-                                <a href="admin/giayphep">
+                                <a href="{{ route('danhmuc.index') }}">
                                     <span class="sub-item">Danh mục</span>
                                 </a>
                             </li>
-                            <li class="@yield('menu3')">
-                                <a href="admin/chungchinv">
+                            <li class="@yield('menu2')">
+                                <a href="{{ route('loaisp.index') }}">
                                     <span class="sub-item">Loại sản phẩm</span>
+                                </a>
+                            </li>
+                            <li class="@yield('menu3')">
+                                <a href="admin/qlcoso">
+                                       <span class="sub-item">Thương hiệu</span>
                                 </a>
                             </li>
                             <li class="@yield('menu4')">
                                 <a href="admin/csvipham">
-                                    <span class="sub-item">Thương hiệu</span>
+                                
+                                    <span class="sub-item">Danh sách Sản phẩm</span>
                                 </a>
                             </li>
                             <li class="@yield('menu5')">
@@ -102,7 +104,7 @@
                     </a>
                     <div class="collapse show" id="charts">
                         <ul class="nav nav-collapse">
-                            <li class="@yield('menu11')">
+                            <li class="@yield('menu9')">
                                 <a href="admin/canbotaphuan">
                                     <span class="sub-item">Danh sách bài viết</span>
                                 </a>
@@ -119,7 +121,7 @@
                     </a>
                     <div class="collapse" id="charts1">
                         <ul class="nav nav-collapse">
-                            <li class="@yield('menu13')">
+                            <li class="@yield('menu10')">
                                 <a href="admin/dstaikhoan">
                                     <span class="sub-item">Danh sách TK</span>
                                 </a>
