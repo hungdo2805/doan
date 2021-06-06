@@ -11,19 +11,10 @@
 |
 */
 
-// Route::get('model/where',function(){
-// 	$data = App\Product1::where('price',1700000)->firstOrFail()->get()->toArray();
-// 	echo "<pre>";
-// 	print_r($data);
-// 	echo "</pre>";
-// });
-
-Route::get('/', function () {
-    return view('welcome');
-});
 
 
-Route::get('home','HomeController@getHome')->name('home');
+
+Route::get('/','HomeController@getHome')->name('home');
 
 Route::get('tintuc','TintucController@gettintuc');
 Route::get('chitietsanpham/{id}','HomeController@getChitietsanpham');
@@ -272,34 +263,6 @@ Route::group(['prefix'=>'admin','middleware'=>'adminLogin'],function(){
 });
 
 
-// Route::get('lienket',function(){
-// 	$data=App\loaisanpham::find(2)->sanpham->toArray();
-// 	var_dump($data);
-// });
-
-// Route::get('taobangloaisanpham',function(){
-// 	Schema::create('loaisanpham',function($table){
-// 		$table->increments('id');
-// 		$table->string('ten');
-// 	});
-// 	echo "da thuc hien";
-// });
-	
-// Route::get('taobangsanpham',function(){
-// 	Schema::create('sanpham',function($table){
-// 		$table->increments('id');
-// 		$table->string('ten');	
-// 		$table->float('gia');
-// 		$table->string('hinh');
-// 		$table->string('mota');
-// 		$table->integer('idloaisanpham')->unsigned();
-// 		$table->foreign('idloaisanpham')->references('id')->on('loaisanpham');
-// 	});
-
-// 	echo "da thuc hien tao bang san pham";
-// });
-
-// Route::get('qb/get',function(){
-// 	$data=DB::table('tb_sp')->get();
-// 	var_dump($data);
-// });
+Route::get('gdadmin', function () {
+	return view('admin2.Viewchinh');
+});
