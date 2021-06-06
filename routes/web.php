@@ -11,10 +11,31 @@
 |
 */
 
+// Hung viet them route
+
+Route::get('/shop.html','HomeController@getShop')->name('getshop');
+
+Route::get('/about.html','HomeController@getAbout')->name('getabout');
+
+Route::get('/product_details.html','HomeController@productDetails')->name('get_produc_details');
+
+Route::get('/news.html','HomeController@getNews')->name('getnews');
+
+Route::get('/news_details.html','HomeController@newsDetails')->name('get_news_details');
+
+Route::get('/contact_us.html','HomeController@contactUs')->name('get_contact_us');
+
+
+
+
+// Hung het viet them route
 
 
 
 Route::get('/','HomeController@getHome')->name('home');
+
+
+
 
 Route::get('tintuc','TintucController@gettintuc');
 Route::get('chitietsanpham/{id}','HomeController@getChitietsanpham');

@@ -92,8 +92,33 @@ class HomeController extends Controller
 
         $sanphamnu=product::select('*')->where('catalog_detail_id','>',5)->where('catalog_detail_id','<',11)->where('status',1)->inRandomOrder()->take(4)->get();
 
-        return view('Home',compact('sanphamnammoi','sanphamnu','khuyenmai'));
+        // return view('Home',compact('sanphamnammoi','sanphamnu','khuyenmai'));
+         return view('home_pages.home');
+    }
 
+
+    public function getShop()
+    {
+        return view('home_pages.shop');
+    }
+
+    public function getNews(){
+        return view('home_pages.news');
+    }
+    public function getAbout(){
+        return view('home_pages.about');
+    }
+
+    public function contactUs(){
+        return view('home_pages.contact_us');
+    }
+
+    public function productDetails(){
+        return view('home_pages.product_details');
+    }
+
+    public function newsDetails(){
+        return view('home_pages.news_details');
     }
 
 
