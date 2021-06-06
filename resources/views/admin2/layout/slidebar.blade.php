@@ -58,14 +58,14 @@
                                 </a>
                             </li>
                             <li class="@yield('menu3')">
-                                <a href="admin/qlcoso">
+                                <a href="{{ route('thuonghieu.index') }}">
                                        <span class="sub-item">Thương hiệu</span>
                                 </a>
                             </li>
                             <li class="@yield('menu4')">
-                                <a href="admin/csvipham">
+                                <a href="{{ route('sanpham.index') }}">
                                 
-                                    <span class="sub-item">Danh sách Sản phẩm</span>
+                                    <span class="sub-item"> Sản phẩm</span>
                                 </a>
                             </li>
                             <li class="@yield('menu5')">

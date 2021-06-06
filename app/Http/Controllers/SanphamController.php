@@ -30,12 +30,14 @@ class SanphamController extends Controller
        view()->share(['danhsach'=>$brand,'catalog'=>$catalog,'dml'=>$catalog_detail,'dml1'=>$catalog_detail1,'dml2'=>$catalog_detail2,'rd_ds'=>$rd_ds]);
     }
 
+    public function Home()
+    {
+       return redirect()->route('sanpham.index');
+    }
+
     public function getdanhsach(){
        $sanpham=product::select('*')->where('status',1)->get();
-      
-       
-        return view('admin.product.danhsach',compact('sanpham'));
-      
+        return view('admin2.sanpham.list',compact('sanpham'));
     }
 
     public function getdanhsachAn(){
@@ -64,7 +66,7 @@ public function getthem(){
       $danhmuc=catalog::select('*')->get();
     	$loaisp=catalog_detail::select('*')->get();
     	$thuonghieu=brand::select('*')->get();
-    	return view('admin.product.them',compact('loaisp','thuonghieu','danhmuc'));
+    	return view('admin2.sanpham.add',compact('loaisp','thuonghieu','danhmuc'));
 }
 public function postthem(Request $rq){
       $this->validate($rq,
@@ -144,7 +146,7 @@ public function postthem(Request $rq){
             }
         }
 
-        return redirect('admin/product/them')->with('thongbao','Thêm sản phẩm thành công');
+        return $this->Home()->with('thongbao','Đã tạo mới');;
 
 }
 
@@ -217,7 +219,7 @@ public function postthem(Request $rq){
         // dd($product);
         $product->save();
 
-        return redirect('admin/product/sua/'.$id)->with('thongbao','Sửa sản phẩm thành công');
+        return $this->Home()->with('thongbao','Đã cập nhật');
 
 
     }

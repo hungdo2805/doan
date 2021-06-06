@@ -10,9 +10,14 @@ use Carbon\Carbon;
 class ThuonghieuController extends Controller
 {
     //
+	public function Home()
+    {
+       return redirect()->route('thuonghieu.index');
+    }
+
     public function getdanhsach(){
     	$thuonghieu=brand::all();
-    	return view('admin/brand/danhsach',compact('thuonghieu'));
+    	return view('admin2.thuonghieu.list',compact('thuonghieu'));
     }
 
     public function getthem(){
@@ -40,16 +45,16 @@ class ThuonghieuController extends Controller
         $thuonghieu->create_time=new Carbon;
        	// dd($thuonghieu);
         $thuonghieu->save();
-        return redirect('admin/brand/them')->with('thongbao','Thêm thành công');
+		return $this->Home()->with('thongbao','Đã tạo mới');;
     }
 
     public function getsua($id){
     	$thuonghieu=brand::find($id);
-    	return view('admin/brand/sua',compact('thuonghieu'));
+    	return view('admin2.thuonghieu.edit',compact('thuonghieu'));
     }
     public function postsua(Request $rq1,$id){
     	$thuonghieu=brand::find($id);
-    	$this->validate($rq1,
+    /*	$this->validate($rq1,
         	[
         		'name' => 'required|unique:brand,name|min:2|max:100',
         		'name' => 'required|min:2|max:100',
@@ -60,19 +65,17 @@ class ThuonghieuController extends Controller
         		'name.min'=>'Tên thể thương hiệu phải có từ 2 -> 100 kí tự',
         		'name.max'=>'Tên thể thương hiệu phải có từ 2 -> 100 kí tự',
         	]
-        );
+        );*/
         $thuonghieu->name=$rq1->name;
         $thuonghieu->status=1;
         
         $thuonghieu->update_time=new Carbon;
        $thuonghieu->save();
-        return redirect('admin/brand/sua/'.$id)->with('thongbao','Cập nhật thành công');
+	   return $this->Home()->with('thongbao','Đã cập nhật');
     }
 
     public function getxoa($id){
-    	$thuonghieu=brand::find($id);
-    	$thuonghieu->delete($id);
-
-    	return redirect()->back();
+    	brand::findOrFail($id)->delete(); 
+        return $this->Home();
     }
 }

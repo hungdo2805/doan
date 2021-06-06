@@ -107,7 +107,7 @@ Route::group(['prefix'=>'admin','middleware'=>'adminLogin'],function(){
 	Route::get('/','HomeController@getadmin')->name('admin.index');
 		Route::group(['prefix'=>'catalog'],function(){
 			// admin/caltalog/danhsach 
-			Route::get('danhsach','TheLoaiController@getdanhsach')->name('danhmuc.index');
+			Route::get('/','TheLoaiController@getdanhsach')->name('danhmuc.index');
 
 			Route::get('them','TheLoaiController@getThem')->name('danhmuc.create');
 			Route::post('them','TheLoaiController@postThem')->name('danhmuc.store');;
@@ -122,17 +122,17 @@ Route::group(['prefix'=>'admin','middleware'=>'adminLogin'],function(){
 
 		Route::group(['prefix'=>'product'],function(){
 			// admin/caltalog/danhsach 
-			Route::get('danhsach','SanphamController@getdanhsach');
+			Route::get('/','SanphamController@getdanhsach')->name('sanpham.index');
 			Route::get('danhsach-an','SanphamController@getdanhsachAn');
 
-			Route::get('them','SanphamController@getthem');
-			Route::post('them','SanphamController@postthem');
+			Route::get('them','SanphamController@getthem')->name('sanpham.create');
+			Route::post('them','SanphamController@postthem')->name('sanpham.store');
 			
-			Route::get('sua/{id}','SanphamController@getsua');
-			Route::post('sua/{id}','SanphamController@postsua');
+			Route::get('sua/{id}','SanphamController@getsua')->name('sanpham.edit');;
+			Route::post('sua/{id}','SanphamController@postsua')->name('sanpham.update');
 			
 
-			Route::get('xoa/{id}','SanphamController@getxoa');
+			Route::get('xoa/{id}','SanphamController@getxoa')->name('sanpham.delete');
 			Route::get('trang-thai-an/{id}','SanphamController@TrangThaiAn');
 			Route::get('trang-thai-hien/{id}','SanphamController@TrangThaiHien');
 			
@@ -154,7 +154,7 @@ Route::group(['prefix'=>'admin','middleware'=>'adminLogin'],function(){
 
 		Route::group(['prefix'=>'catalog_detail'],function(){
 			// admin/caltalog/danhsach 
-			Route::get('danhsach','LoaiController@getdanhsach')->name('loaisp.index');
+			Route::get('/','LoaiController@getdanhsach')->name('loaisp.index');
 
 			Route::get('them','LoaiController@getthem');
 			Route::post('them','LoaiController@postthem')->name('loaisp.store');
@@ -164,6 +164,18 @@ Route::group(['prefix'=>'admin','middleware'=>'adminLogin'],function(){
 			
 
 			Route::get('xoa/{id}','LoaiController@getxoa')->name('loaisp.delete');
+		});
+
+		Route::group(['prefix'=>'thuonghieu'],function(){
+			Route::get('/','ThuonghieuController@getdanhsach')->name('thuonghieu.index');
+
+			Route::get('them','ThuonghieuController@getthem');
+			Route::post('them','ThuonghieuController@postthem')->name('thuonghieu.store');
+
+			Route::get('sua/{id}','ThuonghieuController@getsua')->name('thuonghieu.edit');
+			Route::post('sua/{id}','ThuonghieuController@postsua')->name('thuonghieu.update');
+
+			Route::get('xoa/{id}','ThuonghieuController@getxoa')->name('thuonghieu.delete');
 		});
 
 		Route::group(['prefix'=>'product_details'],function(){
@@ -237,17 +249,7 @@ Route::group(['prefix'=>'admin','middleware'=>'adminLogin'],function(){
 			Route::get('xoa/{id}','BinhluanController@getxoa');
 		});
 
-		Route::group(['prefix'=>'brand'],function(){
-			Route::get('danhsach','ThuonghieuController@getdanhsach');
-
-			Route::get('them','ThuonghieuController@getthem');
-			Route::post('them','ThuonghieuController@postthem');
-
-			Route::get('sua/{id}','ThuonghieuController@getsua');
-			Route::post('sua/{id}','ThuonghieuController@postsua');
-
-			Route::get('xoa/{id}','ThuonghieuController@getxoa');
-		});
+	
 
 		Route::group(['prefix'=>'bill'],function(){
 			Route::get('danhsach-nhan','HoadonController@getdanhsachNhan');

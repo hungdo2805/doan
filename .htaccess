@@ -10,3 +10,15 @@ RewriteRule ^(.*)$ public/$1
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^ server.php
+
+
+
+Header add Access-Control-Allow-Origin: "*"
+Header add Access-Control-Allow-Methods: "GET,POST,OPTIONS,DELETE,PUT"
+Header add Access-Control-Allow-Headers: "Content-Type"
+<Limit GET POST PUT DELETE HEAD  OPTIONS>
+    Require all granted
+</Limit>
+<LimitExcept GET POST PUT DELETE HEAD  OPTIONS>
+    Require all denied
+</LimitExcept>

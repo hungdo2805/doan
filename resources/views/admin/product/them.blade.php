@@ -130,7 +130,7 @@
                                             </div>
                                      @endfor
                     </div>
-                    <form>
+            <form>
 
                 </div>
                 <!-- /.row -->
