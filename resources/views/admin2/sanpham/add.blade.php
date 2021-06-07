@@ -166,5 +166,6 @@
     });
 </script>
 
+<script src="{{ asset('public/ckeditor/ckeditor.js') }}"></script>
     
 @endsection

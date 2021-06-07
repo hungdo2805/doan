@@ -227,12 +227,12 @@ public function postthem(Request $rq){
     
 
     public function getxoa($id){
-        $list_image=product::find($id)->list_image->toArray();
+     /*   $list_image=product::find($id)->list_image->toArray();
         
         foreach ($list_image as $value) {
           File::delete('public/imgshoptt_list/'.$value["image1"]);
           
-        }
+        }*/
         $product_details=product::find($id)->product_details->toArray();
         $product_details1=product_details::where('product_id',$id)->delete();
 
