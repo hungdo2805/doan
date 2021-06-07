@@ -78,15 +78,15 @@
                <div class="row">
                     <div class="col-lg-6 col-md-6">
                         <div class="copyright_area">
-                            <p> &copy; 2021 <strong> </strong> Mede with ❤️ by <a href="https://hasthemes.com/" target="_blank"><strong>HasThemes</strong></a></p>
+                            <p> &copy; 2021 <strong> </strong> Mede with ❤️ by <a href="{{asset('/')}}" target="_blank"><strong>Me</strong></a></p>
                         </div>
                     </div>
                     <div class="col-lg-6 col-md-6">
                         <div class="footer_custom_links">
                             <ul>
-                                <li><a href="#">Order History</a></li>
-                                <li><a href="wishlist.html">Wish List</a></li>
-                                <li><a href="#">Newsletter</a></li>
+                                <li><a href="#">Trang chủ</a></li>
+                                <li><a href="wishlist.html">Sản phẩm</a></li>
+                                <li><a href="#">Liên hệ</a></li>
                             </ul>
                         </div>
                     </div>

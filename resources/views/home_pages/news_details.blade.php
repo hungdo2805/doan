@@ -39,7 +39,7 @@
                         <h3 class="widget_title">Bài viết mới nhất</h3>
                         <div class="sidebar_post">
                             <div class="post_img">
-                                <a href="{{route('get_produc_details}}"><img src="{{asset('home_pages/assets/img/blog/post1.png')}}" alt=""></a>
+                                
                             </div>
                             <div class="post_text">
                                 <h3><a href="{{route('get_produc_details}}">Blog image post format</a></h3>
@@ -251,6 +251,7 @@
                                     <button class="submit" type="submit">Gửi bình luận</button>
                                  </form>    
                             </div> 
+                        </div> 
                    </div>
                 </div>
                 <!--blog grid area start-->

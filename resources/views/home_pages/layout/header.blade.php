@@ -25,9 +25,6 @@
                     <li>
                         <a href="#">Cửa hàng</a>
                     </li>
-                    <li>
-                        <a href="#">Tin tức</a>
-                    </li>
                     <li class="menu-item-has-children">
                         <a href="my-account.html">Tài khoản</a>
                     </li>
@@ -158,9 +155,9 @@
                                 <nav>  
                                     <ul>
                                         <li class="active"><a href="{{asset('/')}}">Trang chủ </a></li>
-                                        <li><a href="{{route('getshop')}}">Cửa hàng </a></li>
                                         <li><a href="{{route('getabout')}}">Giới thiệu</a></li>
-                                        <li><a href="#">pages <i class="fa fa-angle-down"></i></a>
+                                        <li><a href="{{route('getshop')}}">Cửa hàng </a></li>
+                                        {{-- <li><a href="#">pages <i class="fa fa-angle-down"></i></a>
                                             <ul class="sub_menu pages">
                                                 <li><a href="about.html">About Us</a></li>
                                                 <li><a href="services.html">services</a></li>
@@ -173,9 +170,7 @@
                                                 <li><a href="privacy-policy.html">privacy policy</a></li>
                                                 <li><a href="coming-soon.html">coming soon</a></li>
                                             </ul>
-                                        </li>
-                                        <li><a href="{{route('getnews')}}">Tin tức</a></li>
-                                        
+                                        </li>                                         --}}
                                         <li><a href="{{route('get_contact_us')}}">Liên hệ</a></li>
                                     </ul>   
                                 </nav> 

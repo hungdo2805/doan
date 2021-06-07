@@ -4,7 +4,7 @@
     @include('home_pages.layout.slider')
     @include('home_pages.layout.banner')
     <!--product section area start-->
-    <section class="product_section womens_product">
+    {{-- <section class="product_section womens_product">
         <div class="container">
             <div class="row">   
                 <div class="col-12">
@@ -840,7 +840,7 @@
             </div>
                
         </div>
-    </section>
+    </section> --}}
     <!--product section area end-->
     
     <!--banner area start-->
@@ -850,10 +850,10 @@
                <div class="col-lg-6 col-md-6">
                     <div class="banner_area">
                         <div class="banner_thumb">
-                            <a href="shop.html"><img src="assets/img/bg/banner11.jpg" alt="#"></a>
+                            <a href="{{asset('')}}"><img src="{{asset('home_pages/assets/img/bg/banner11.jpg')}}" alt="#"></a>
                             <div class="banner_content">
                                <h1>Handbag <br> Men’s Collection</h1>
-                                <a href="shop.html">Discover Now</a>
+                                <a href="{{asset('')}}">Discover Now</a>
                             </div>
                         </div>
                     </div>
@@ -861,10 +861,10 @@
                 <div class="col-lg-6 col-md-6">
                     <div class="banner_area">
                         <div class="banner_thumb">
-                            <a href="shop.html"><img src="assets/img/bg/banner12.jpg" alt="#"></a>
+                            <a href="{{asset('')}}"><img src="{{asset('home_pages/assets/img/bg/banner12.jpg')}}" alt="2"></a>
                             <div class="banner_content">
                                <h1>Sneaker <br> Men’s Collection</h1>
-                                <a href="shop.html">Discover Now</a>
+                                <a href="{{asset('')}}">Discover Now</a>
                             </div>
                         </div>
                     </div>
@@ -876,11 +876,11 @@
     
     <!--product section area start-->
     <section class="product_section womens_product bottom">
-        <div class="container">
+        <div class="container mb-3">
             <div class="row">   
                 <div class="col-12">
                    <div class="section_title">
-                       <h2>Sản phẩm thịnh hành</h2>
+                       <h2>Quần áo nam</h2>
                        <p>Sản phẩm ấn tượng và bán chạy nhất</p>
                    </div>
                 </div> 
@@ -891,140 +891,219 @@
                         <div class="col-lg-3">
                             <div class="single_product">
                                 <div class="product_thumb">
-                                    <a class="primary_img" href="product-details.html"><img src="assets/img/product/product21.jpg" alt=""></a>
-                                    <a class="secondary_img" href="product-details.html"><img src="assets/img/product/product22.jpg" alt=""></a>
+                                    <a class="primary_img" href="{{route('get_product_details')}}"><img src="{{asset('home_pages/assets/img/product/product21.jpg')}}" alt=""></a>
+                                    <a class="secondary_img" href="{{route('get_product_details')}}"><img src="{{asset('home_pages/assets/img/product/product22.jpg')}}" alt=""></a>
 
                                     <div class="quick_button">
                                         <a href="#" title="quick_view">Xem sản phẩm</a>
-                                    </div>
-
-                                    <div class="product_sale">
-                                        <span>-7%</span>
                                     </div>
                                 </div>
                                 <div class="product_content">
                                     <h3><a href="product-details.html">Marshall Portable  Bluetooth</a></h3>
-                                    <span class="current_price">£60.00</span>
-                                    <span class="old_price">£86.00</span>
+                                    <p class="product_description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati neque voluptatem quae unde dolor quas! Soluta laboriosam voluptatibus inventore iste esse accusamus ullam vero dolores, architecto praesentium fuga nihil nostrum.</p>
                                 </div>
                             </div>
                         </div>
                         <div class="col-lg-3">
                             <div class="single_product">
                                 <div class="product_thumb">
-                                    <a class="primary_img" href="product-details.html"><img src="assets/img/product/product27.jpg" alt=""></a>
-                                    <a class="secondary_img" href="product-details.html"><img src="assets/img/product/product28.jpg" alt=""></a>
+                                    <a class="primary_img" href="product-details.html"><img src="{{asset('home_pages/assets/img/product/product21.jpg')}}" alt=""></a>
+                                    <a class="secondary_img" href="product-details.html"><img src="{{asset('home_pages/assets/img/product/product22.jpg')}}" alt=""></a>
 
                                     <div class="quick_button">
                                         <a href="#" title="quick_view">Xem sản phẩm</a>
                                     </div>
                                 </div>
                                 <div class="product_content">
-                                    <h3><a href="product-details.html">Koss KPH7 Portable</a></h3>
-                                    <span class="current_price">£60.00</span>
+                                    <h3><a href="product-details.html">Marshall Portable  Bluetooth</a></h3>
+                                    <p class="product_description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati neque voluptatem quae unde dolor quas! Soluta laboriosam voluptatibus inventore iste esse accusamus ullam vero dolores, architecto praesentium fuga nihil nostrum.</p>
                                 </div>
                             </div>
                         </div>
                         <div class="col-lg-3">
                             <div class="single_product">
                                 <div class="product_thumb">
-                                    <a class="primary_img" href="product-details.html"><img src="assets/img/product/product6.jpg" alt=""></a>
-                                    <a class="secondary_img" href="product-details.html"><img src="assets/img/product/product5.jpg" alt=""></a>
+                                    <a class="primary_img" href="product-details.html"><img src="{{asset('home_pages/assets/img/product/product22.jpg')}}" alt=""></a>
+                                    <a class="secondary_img" href="product-details.html"><img src="{{asset('home_pages/assets/img/product/product23.jpg')}}" alt=""></a>
 
                                     <div class="quick_button">
                                         <a href="#" title="quick_view">Xem sản phẩm</a>
                                     </div>
-
                                 </div>
                                 <div class="product_content">
-                                    <h3><a href="product-details.html">Beats Solo2 Solo 2</a></h3>
-                                    <span class="current_price">£60.00</span>
+                                    <h3><a href="product-details.html">Marshall Portable  Bluetooth</a></h3>
+                                    <p class="product_description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati neque voluptatem quae unde dolor quas! Soluta laboriosam voluptatibus inventore iste esse accusamus ullam vero dolores, architecto praesentium fuga nihil nostrum.</p>
                                 </div>
                             </div>
                         </div>
                         <div class="col-lg-3">
                             <div class="single_product">
                                 <div class="product_thumb">
-                                    <a class="primary_img" href="product-details.html"><img src="assets/img/product/product7.jpg" alt=""></a>
-                                    <a class="secondary_img" href="product-details.html"><img src="assets/img/product/product8.jpg" alt=""></a>
+                                    <a class="primary_img" href="product-details.html"><img src="{{asset('home_pages/assets/img/product/product21.jpg')}}" alt=""></a>
+                                    <a class="secondary_img" href="product-details.html"><img src="{{asset('home_pages/assets/img/product/product22.jpg')}}" alt=""></a>
 
                                     <div class="quick_button">
                                         <a href="#" title="quick_view">Xem sản phẩm</a>
                                     </div>
-
-                                    <div class="product_sale">
-                                        <span>-7%</span>
-                                    </div>
                                 </div>
                                 <div class="product_content">
-                                    <h3><a href="product-details.html">Beats EP Wired</a></h3>
-                                    <span class="current_price">£60.00</span>
-                                    <span class="old_price">£86.00</span>
+                                    <h3><a href="product-details.html">Marshall Portable  Bluetooth</a></h3>
+                                    <p class="product_description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati neque voluptatem quae unde dolor quas! Soluta laboriosam voluptatibus inventore iste esse accusamus ullam vero dolores, architecto praesentium fuga nihil nostrum.</p>
                                 </div>
                             </div>
                         </div>
                         <div class="col-lg-3">
                             <div class="single_product">
                                 <div class="product_thumb">
-                                    <a class="primary_img" href="product-details.html"><img src="assets/img/product/product24.jpg" alt=""></a>
-                                    <a class="secondary_img" href="product-details.html"><img src="assets/img/product/product25.jpg" alt=""></a>
+                                    <a class="primary_img" href="product-details.html"><img src="{{asset('home_pages/assets/img/product/product21.jpg')}}" alt=""></a>
+                                    <a class="secondary_img" href="product-details.html"><img src="{{asset('home_pages/assets/img/product/product22.jpg')}}" alt=""></a>
 
                                     <div class="quick_button">
                                         <a href="#" title="quick_view">Xem sản phẩm</a>
                                     </div>
                                 </div>
                                 <div class="product_content">
-                                    <h3><a href="product-details.html">Bose SoundLink Bluetooth</a></h3>
-                                    <span class="current_price">£60.00</span>
+                                    <h3><a href="product-details.html">Marshall Portable  Bluetooth</a></h3>
+                                    <p class="product_description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati neque voluptatem quae unde dolor quas! Soluta laboriosam voluptatibus inventore iste esse accusamus ullam vero dolores, architecto praesentium fuga nihil nostrum.</p>
                                 </div>
                             </div>
                         </div>
                         <div class="col-lg-3">
                             <div class="single_product">
                                 <div class="product_thumb">
-                                    <a class="primary_img" href="product-details.html"><img src="assets/img/product/product10.jpg" alt=""></a>
-                                    <a class="secondary_img" href="product-details.html"><img src="assets/img/product/product11.jpg" alt=""></a>
-
-                                    <div class="quick_button">
-                                        <a href="#" title="quick_view">Xem sản phẩm</a>
-                                    </div>
-
-                                    <div class="product_sale">
-                                        <span>-7%</span>
-                                    </div>
-                                </div>
-                                <div class="product_content">
-                                    <h3><a href="product-details.html">Apple iPhone SE 16GB</a></h3>
-                                    <span class="current_price">£60.00</span>
-                                    <span class="old_price">£86.00</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3">
-                            <div class="single_product">
-                                <div class="product_thumb">
-                                    <a class="primary_img" href="product-details.html"><img src="assets/img/product/product23.jpg" alt=""></a>
-                                    <a class="secondary_img" href="product-details.html"><img src="assets/img/product/product24.jpg" alt=""></a>
+                                    <a class="primary_img" href="product-details.html"><img src="{{asset('home_pages/assets/img/product/product22.jpg')}}" alt=""></a>
+                                    <a class="secondary_img" href="product-details.html"><img src="{{asset('home_pages/assets/img/product/product23.jpg')}}" alt=""></a>
 
                                     <div class="quick_button">
                                         <a href="#" title="quick_view">Xem sản phẩm</a>
                                     </div>
                                 </div>
                                 <div class="product_content">
-                                    <h3><a href="product-details.html">JBL Flip 3 Portable</a></h3>
-                                    <span class="current_price">£60.00</span>
+                                    <h3><a href="product-details.html">Marshall Portable  Bluetooth</a></h3>
+                                    <p class="product_description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati neque voluptatem quae unde dolor quas! Soluta laboriosam voluptatibus inventore iste esse accusamus ullam vero dolores, architecto praesentium fuga nihil nostrum.</p>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-               
+            </div>            
+        </div>
+        <div class="container mb-3">
+            <div class="row">   
+                <div class="col-12">
+                   <div class="section_title">
+                       <h2>Quần áo nữ</h2>
+                       <p>Sản phẩm ấn tượng và bán chạy nhất</p>
+                   </div>
+                </div> 
+            </div>    
+            <div class="product_area"> 
+                 <div class="row">
+                    <div class="product_carousel product_three_column4 owl-carousel">
+                        <div class="col-lg-3">
+                            <div class="single_product">
+                                <div class="product_thumb">
+                                    <a class="primary_img" href="product-details.html"><img src="{{asset('home_pages/assets/img/product/product21.jpg')}}" alt=""></a>
+                                    <a class="secondary_img" href="product-details.html"><img src="{{asset('home_pages/assets/img/product/product22.jpg')}}" alt=""></a>
+
+                                    <div class="quick_button">
+                                        <a href="#" title="quick_view">Xem sản phẩm</a>
+                                    </div>
+                                </div>
+                                <div class="product_content">
+                                    <h3><a href="product-details.html">Marshall Portable  Bluetooth</a></h3>
+                                    <p class="product_description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati neque voluptatem quae unde dolor quas! Soluta laboriosam voluptatibus inventore iste esse accusamus ullam vero dolores, architecto praesentium fuga nihil nostrum.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="single_product">
+                                <div class="product_thumb">
+                                    <a class="primary_img" href="product-details.html"><img src="{{asset('home_pages/assets/img/product/product21.jpg')}}" alt=""></a>
+                                    <a class="secondary_img" href="product-details.html"><img src="{{asset('home_pages/assets/img/product/product22.jpg')}}" alt=""></a>
+
+                                    <div class="quick_button">
+                                        <a href="#" title="quick_view">Xem sản phẩm</a>
+                                    </div>
+                                </div>
+                                <div class="product_content">
+                                    <h3><a href="product-details.html">Marshall Portable  Bluetooth</a></h3>
+                                    <p class="product_description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati neque voluptatem quae unde dolor quas! Soluta laboriosam voluptatibus inventore iste esse accusamus ullam vero dolores, architecto praesentium fuga nihil nostrum.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="single_product">
+                                <div class="product_thumb">
+                                    <a class="primary_img" href="product-details.html"><img src="{{asset('home_pages/assets/img/product/product22.jpg')}}" alt=""></a>
+                                    <a class="secondary_img" href="product-details.html"><img src="{{asset('home_pages/assets/img/product/product23.jpg')}}" alt=""></a>
+
+                                    <div class="quick_button">
+                                        <a href="#" title="quick_view">Xem sản phẩm</a>
+                                    </div>
+                                </div>
+                                <div class="product_content">
+                                    <h3><a href="product-details.html">Marshall Portable  Bluetooth</a></h3>
+                                    <p class="product_description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati neque voluptatem quae unde dolor quas! Soluta laboriosam voluptatibus inventore iste esse accusamus ullam vero dolores, architecto praesentium fuga nihil nostrum.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="single_product">
+                                <div class="product_thumb">
+                                    <a class="primary_img" href="product-details.html"><img src="{{asset('home_pages/assets/img/product/product21.jpg')}}" alt=""></a>
+                                    <a class="secondary_img" href="product-details.html"><img src="{{asset('home_pages/assets/img/product/product22.jpg')}}" alt=""></a>
+
+                                    <div class="quick_button">
+                                        <a href="#" title="quick_view">Xem sản phẩm</a>
+                                    </div>
+                                </div>
+                                <div class="product_content">
+                                    <h3><a href="product-details.html">Marshall Portable  Bluetooth</a></h3>
+                                    <p class="product_description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati neque voluptatem quae unde dolor quas! Soluta laboriosam voluptatibus inventore iste esse accusamus ullam vero dolores, architecto praesentium fuga nihil nostrum.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="single_product">
+                                <div class="product_thumb">
+                                    <a class="primary_img" href="product-details.html"><img src="{{asset('home_pages/assets/img/product/product21.jpg')}}" alt=""></a>
+                                    <a class="secondary_img" href="product-details.html"><img src="{{asset('home_pages/assets/img/product/product22.jpg')}}" alt=""></a>
+
+                                    <div class="quick_button">
+                                        <a href="#" title="quick_view">Xem sản phẩm</a>
+                                    </div>
+                                </div>
+                                <div class="product_content">
+                                    <h3><a href="product-details.html">Marshall Portable  Bluetooth</a></h3>
+                                    <p class="product_description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati neque voluptatem quae unde dolor quas! Soluta laboriosam voluptatibus inventore iste esse accusamus ullam vero dolores, architecto praesentium fuga nihil nostrum.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="single_product">
+                                <div class="product_thumb">
+                                    <a class="primary_img" href="product-details.html"><img src="{{asset('home_pages/assets/img/product/product22.jpg')}}" alt=""></a>
+                                    <a class="secondary_img" href="product-details.html"><img src="{{asset('home_pages/assets/img/product/product23.jpg')}}" alt=""></a>
+
+                                    <div class="quick_button">
+                                        <a href="#" title="quick_view">Xem sản phẩm</a>
+                                    </div>
+                                </div>
+                                <div class="product_content">
+                                    <h3><a href="product-details.html">Marshall Portable  Bluetooth</a></h3>
+                                    <p class="product_description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati neque voluptatem quae unde dolor quas! Soluta laboriosam voluptatibus inventore iste esse accusamus ullam vero dolores, architecto praesentium fuga nihil nostrum.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>            
         </div>
     </section>
     <!--product section area end-->
 
-    <!--blog section area start-->
+    {{-- <!--blog section area start-->
     <section class="blog_section blog_section_three">
         <div class="container">
            <div class="row">
@@ -1137,5 +1216,5 @@
             </div>
         </div>
     </section>
-    <!--blog section area end-->
+    <!--blog section area end--> --}}
 @endsection

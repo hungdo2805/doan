@@ -167,6 +167,79 @@
                 </div>
             </div>
         </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="comments_box">
+                    <h3>3 Comments	</h3>
+                    <div class="comment_list">
+                        <div class="comment-author-thumb">
+                            <img src="{{asset('assets/img/blog/comment2.png.jpg')}}" alt="">
+                        </div>
+                        <div class="comment_content">
+                            <div class="comment_meta">
+                                <div class="comment_title">
+                                    <h5><a href="#">Admin</a></h5>
+                                    <span>October 16, 2018 at 1:38 am</span>
+                                </div>  
+                            </div>
+                            <p>But I must explain to you how all this mistaken idea of denouncing pleasure</p>
+                            <div class="comment_reply">
+                                <a href="#">Reply</a>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="comment_list comment_border">
+                        <div class="comment-author-thumb">
+                            <img src="{{asset('assets/img/blog/comment3.png.jpg')}}" alt="">
+                        </div>
+                        <div class="comment_content">
+                            <div class="comment_meta">
+                                <div class="comment_title">
+                                    <h5><a href="#">Demo</a></h5>
+                                    <span>October 16, 2018 at 1:38 am</span>
+                                </div>
+                            </div>
+                            <p>Quisque semper nunc vitae erat pellentesque, ac placerat arcu consectetur</p>
+                            <div class="comment_reply">
+                                <a href="#">Reply</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="comment_list">
+                        <div class="comment-author-thumb">
+                            <img src="assets/img/blog/comment2.png.jpg" alt="">
+                        </div>
+                        <div class="comment_content">
+                            <div class="comment_meta">
+                                <div class="comment_title">
+                                    <h5><a href="#">Admin</a></h5>
+                                    <span>October 16, 2018 at 1:38 am</span>
+                                </div>
+                            </div>
+                            <p>Quisque orci nibh, porta vitae sagittis sit amet, vehicula vel mauris. Aenean at</p>
+                            <div class="comment_reply">
+                                <a href="#">Reply</a>
+                            </div>
+                        </div>
+                    </div>
+                 </div>
+                <div class="comments_form">
+                        <h3>Bình luân của bạn</h3>
+                        <p>Đăng nhập để bình luận !</p>
+                        <form action="#">
+                            <div class="row">
+                                <div class="col-12">
+                                    <label for="review_comment">Bình luận </label>
+                                    <textarea name="comment" id="review_comment"></textarea>
+                                </div> 
+                            </div>
+                            <button class="submit" type="submit">Gửi bình luận</button>
+                        </form>    
+                    </div> 
+                </div> 
+            </div>
+        </div>
     </div>    
 </div>
 

@@ -17,7 +17,7 @@ Route::get('/shop.html','HomeController@getShop')->name('getshop');
 
 Route::get('/about.html','HomeController@getAbout')->name('getabout');
 
-Route::get('/product_details.html','HomeController@productDetails')->name('get_produc_details');
+Route::get('/product_details.html','HomeController@productDetails')->name('get_product_details');
 
 Route::get('/news.html','HomeController@getNews')->name('getnews');
 
