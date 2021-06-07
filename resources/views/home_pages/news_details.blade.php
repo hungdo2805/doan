@@ -39,40 +39,40 @@
                         <h3 class="widget_title">Bài viết mới nhất</h3>
                         <div class="sidebar_post">
                             <div class="post_img">
-                                <a href="{{route("get_produc_details")}}"><img src="{{asset('home_pages/assets/img/blog/post1.png')}}" alt=""></a>
+                                <a href="{{route('get_produc_details}}"><img src="{{asset('home_pages/assets/img/blog/post1.png')}}" alt=""></a>
                             </div>
                             <div class="post_text">
-                                <h3><a href="{{route("get_produc_details")}}">Blog image post format</a></h3>
+                                <h3><a href="{{route('get_produc_details}}">Blog image post format</a></h3>
                                 <span>March 3, 2018</span>
                             </div>
                             
                         </div>
                         <div class="sidebar_post">
                             <div class="post_img">
-                                <a href="{{route("get_produc_details")}}"><img src="{{asset('home_pages/assets/img/blog/post2.png')}}" alt=""></a>
+                                <a href="{{route('get_produc_details}}"><img src="{{asset('home_pages/assets/img/blog/post2.png')}}" alt=""></a>
                             </div>
                             <div class="post_text">
-                                <h3><a href="{{route("get_produc_details")}}">Post in Gallery format</a></h3>
+                                <h3><a href="{{route('get_produc_details}}">Post in Gallery format</a></h3>
                                 <span>March 3, 2018</span>
                             </div>
                             
                         </div> 
                         <div class="sidebar_post">
                             <div class="post_img">
-                                <a href="{{route("get_produc_details")}}"><img src="{{asset('home_pages/assets/img/blog/post3.png')}}" alt=""></a>
+                                <a href="{{route('get_produc_details}}"><img src="{{asset('home_pages/assets/img/blog/post3.png')}}" alt=""></a>
                             </div>
                             <div class="post_text">
-                                <h3><a href="{{route("get_produc_details")}}">Single post in Audio format </a></h3>
+                                <h3><a href="{{route('get_produc_details}}">Single post in Audio format </a></h3>
                                 <span>March 3, 2018</span>
                             </div>
                             
                         </div>
                         <div class="sidebar_post">
                             <div class="post_img">
-                                <a href="{{route("get_produc_details")}}"><img src="{{asset('home_pages/assets/img/blog/post4.png')}}" alt=""></a>
+                                <a href="{{route('get_produc_details}}"><img src="{{asset('home_pages/assets/img/blog/post4.png')}}" alt=""></a>
                             </div>
                             <div class="post_text">
-                                <h3><a href="{{route("get_produc_details")}}">Post in Video format vitae</a></h3>
+                                <h3><a href="{{route('get_produc_details}}">Post in Video format vitae</a></h3>
                                 <span>March 3, 2018</span>
                             </div>
                             
@@ -85,40 +85,40 @@
                         <h3 class="widget_title">Comments</h3>
                         <div class="sidebar_post">
                             <div class="post_img">
-                                <a href="{{route("get_produc_details")}}"><img src="assets/img/blog/comment.png.jpg" alt=""></a>
+                                <a href="{{route('get_produc_details}}"><img src="assets/img/blog/comment.png.jpg" alt=""></a>
                             </div>
                             <div class="post_text">
-                                <h3><a href="{{route("get_produc_details")}}">Blog image post format</a></h3>
+                                <h3><a href="{{route('get_produc_details}}">Blog image post format</a></h3>
                                 <span>March 3, 2018</span>
                             </div>
                             
                         </div>
                         <div class="sidebar_post">
                             <div class="post_img">
-                                <a href="{{route("get_produc_details")}}"><img src="assets/img/blog/comment.png.jpg" alt=""></a>
+                                <a href="{{route('get_produc_details}}"><img src="assets/img/blog/comment.png.jpg" alt=""></a>
                             </div>
                             <div class="post_text">
-                                <h3><a href="{{route("get_produc_details")}}">Post in Gallery format</a></h3>
+                                <h3><a href="{{route('get_produc_details}}">Post in Gallery format</a></h3>
                                 <span>March 3, 2018</span>
                             </div>
                             
                         </div> 
                         <div class="sidebar_post">
                             <div class="post_img">
-                                <a href="{{route("get_produc_details")}}"><img src="assets/img/blog/comment.png.jpg" alt=""></a>
+                                <a href="{{route('get_produc_details}}"><img src="assets/img/blog/comment.png.jpg" alt=""></a>
                             </div>
                             <div class="post_text">
-                                <h3><a href="{{route("get_produc_details")}}">Single post in Audio format </a></h3>
+                                <h3><a href="{{route('get_produc_details}}">Single post in Audio format </a></h3>
                                 <span>March 3, 2018</span>
                             </div>
                             
                         </div>
                         <div class="sidebar_post">
                             <div class="post_img">
-                                <a href="{{route("get_produc_details")}}"><img src="assets/img/blog/comment.png.jpg" alt=""></a>
+                                <a href="{{route('get_produc_details}}"><img src="assets/img/blog/comment.png.jpg" alt=""></a>
                             </div>
                             <div class="post_text">
-                                <h3><a href="{{route("get_produc_details")}}">Post in Video format vitae</a></h3>
+                                <h3><a href="{{route('get_produc_details}}">Post in Video format vitae</a></h3>
                                 <span>March 3, 2018</span>
                             </div>
                             
